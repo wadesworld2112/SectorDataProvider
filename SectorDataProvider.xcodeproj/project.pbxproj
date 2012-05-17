@@ -112,6 +112,7 @@
 				B110111815635580009ED9CC /* SectorDataProviderTests */,
 				B11010FB15635580009ED9CC /* Frameworks */,
 				B11010FA15635580009ED9CC /* Products */,
+				B110116C1564A3BF009ED9CC /* README.markdown */,
 				B110112915635923009ED9CC /* Kiwi.xcodeproj */,
 			);
 			sourceTree = "<group>";
@@ -155,7 +156,6 @@
 				B110114915638AA3009ED9CC /* VOR.h */,
 				B110114A15638AA3009ED9CC /* VOR.m */,
 				B110110315635580009ED9CC /* Supporting Files */,
-				B110116C1564A3BF009ED9CC /* README.markdown */,
 			);
 			path = SectorDataProvider;
 			sourceTree = "<group>";
