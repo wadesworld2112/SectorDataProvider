@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B11010FD15635580009ED9CC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11010FC15635580009ED9CC /* Cocoa.framework */; };
+		B110110715635580009ED9CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B110110515635580009ED9CC /* InfoPlist.strings */; };
+		B110110B15635580009ED9CC /* SectorDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B110110A15635580009ED9CC /* SectorDataProvider.m */; };
+		B110111315635580009ED9CC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B110111215635580009ED9CC /* SenTestingKit.framework */; };
+		B110111415635580009ED9CC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11010FC15635580009ED9CC /* Cocoa.framework */; };
+		B110111715635580009ED9CC /* SectorDataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11010F915635580009ED9CC /* SectorDataProvider.framework */; };
+		B110111D15635580009ED9CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B110111B15635580009ED9CC /* InfoPlist.strings */; };
+		B110112015635580009ED9CC /* SectorDataProviderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B110111F15635580009ED9CC /* SectorDataProviderTests.m */; };
+		B110113915635EED009ED9CC /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B110113315635924009ED9CC /* libKiwi.a */; };
+		B110114715638A65009ED9CC /* NavAid.h in Headers */ = {isa = PBXBuildFile; fileRef = B110114515638A65009ED9CC /* NavAid.h */; };
+		B110114815638A65009ED9CC /* NavAid.m in Sources */ = {isa = PBXBuildFile; fileRef = B110114615638A65009ED9CC /* NavAid.m */; };
+		B110114B15638AA3009ED9CC /* VOR.h in Headers */ = {isa = PBXBuildFile; fileRef = B110114915638AA3009ED9CC /* VOR.h */; };
+		B110114C15638AA3009ED9CC /* VOR.m in Sources */ = {isa = PBXBuildFile; fileRef = B110114A15638AA3009ED9CC /* VOR.m */; };
+		B110114E15638B5F009ED9CC /* NavAidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B110114D15638B5F009ED9CC /* NavAidTests.m */; };
+		B110115015639713009ED9CC /* VORTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B110114F15639713009ED9CC /* VORTests.m */; };
+		B110116D1564A3BF009ED9CC /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = B110116C1564A3BF009ED9CC /* README.markdown */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B110111515635580009ED9CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B11010EF1563557F009ED9CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B11010F815635580009ED9CC;
+			remoteInfo = SectorDataProvider;
+		};
+		B110113215635924009ED9CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B110112915635923009ED9CC /* Kiwi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F5015B9F11583A77002E9A98;
+			remoteInfo = Kiwi;
+		};
+		B110113415635924009ED9CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B110112915635923009ED9CC /* Kiwi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F5015C9E11584017002E9A98;
+			remoteInfo = KiwiTests;
+		};
+		B110113615635924009ED9CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B110112915635923009ED9CC /* Kiwi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A3B16542139967B800E9CC6E;
+			remoteInfo = KiwiExamples;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B11010F915635580009ED9CC /* SectorDataProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SectorDataProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B11010FC15635580009ED9CC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B11010FF15635580009ED9CC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B110110015635580009ED9CC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B110110115635580009ED9CC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B110110415635580009ED9CC /* SectorDataProvider-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SectorDataProvider-Info.plist"; sourceTree = "<group>"; };
+		B110110615635580009ED9CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B110110815635580009ED9CC /* SectorDataProvider-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SectorDataProvider-Prefix.pch"; sourceTree = "<group>"; };
+		B110110915635580009ED9CC /* SectorDataProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SectorDataProvider.h; sourceTree = "<group>"; };
+		B110110A15635580009ED9CC /* SectorDataProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SectorDataProvider.m; sourceTree = "<group>"; };
+		B110111115635580009ED9CC /* SectorDataProviderTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SectorDataProviderTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B110111215635580009ED9CC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		B110111A15635580009ED9CC /* SectorDataProviderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SectorDataProviderTests-Info.plist"; sourceTree = "<group>"; };
+		B110111C15635580009ED9CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B110111F15635580009ED9CC /* SectorDataProviderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SectorDataProviderTests.m; sourceTree = "<group>"; };
+		B110112915635923009ED9CC /* Kiwi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kiwi.xcodeproj; path = Frameworks/Kiwi/Kiwi.xcodeproj; sourceTree = "<group>"; };
+		B110114515638A65009ED9CC /* NavAid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavAid.h; sourceTree = "<group>"; };
+		B110114615638A65009ED9CC /* NavAid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavAid.m; sourceTree = "<group>"; };
+		B110114915638AA3009ED9CC /* VOR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOR.h; sourceTree = "<group>"; };
+		B110114A15638AA3009ED9CC /* VOR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOR.m; sourceTree = "<group>"; };
+		B110114D15638B5F009ED9CC /* NavAidTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavAidTests.m; sourceTree = "<group>"; };
+		B110114F15639713009ED9CC /* VORTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VORTests.m; sourceTree = "<group>"; };
+		B110116C1564A3BF009ED9CC /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B11010F515635580009ED9CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B11010FD15635580009ED9CC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B110110D15635580009ED9CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B110113915635EED009ED9CC /* libKiwi.a in Frameworks */,
+				B110111315635580009ED9CC /* SenTestingKit.framework in Frameworks */,
+				B110111415635580009ED9CC /* Cocoa.framework in Frameworks */,
+				B110111715635580009ED9CC /* SectorDataProvider.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B11010ED1563557F009ED9CC = {
+			isa = PBXGroup;
+			children = (
+				B110110215635580009ED9CC /* SectorDataProvider */,
+				B110111815635580009ED9CC /* SectorDataProviderTests */,
+				B11010FB15635580009ED9CC /* Frameworks */,
+				B11010FA15635580009ED9CC /* Products */,
+				B110112915635923009ED9CC /* Kiwi.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		B11010FA15635580009ED9CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B11010F915635580009ED9CC /* SectorDataProvider.framework */,
+				B110111115635580009ED9CC /* SectorDataProviderTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B11010FB15635580009ED9CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B11010FC15635580009ED9CC /* Cocoa.framework */,
+				B110111215635580009ED9CC /* SenTestingKit.framework */,
+				B11010FE15635580009ED9CC /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B11010FE15635580009ED9CC /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B11010FF15635580009ED9CC /* AppKit.framework */,
+				B110110015635580009ED9CC /* CoreData.framework */,
+				B110110115635580009ED9CC /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		B110110215635580009ED9CC /* SectorDataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				B110110915635580009ED9CC /* SectorDataProvider.h */,
+				B110110A15635580009ED9CC /* SectorDataProvider.m */,
+				B110114515638A65009ED9CC /* NavAid.h */,
+				B110114615638A65009ED9CC /* NavAid.m */,
+				B110114915638AA3009ED9CC /* VOR.h */,
+				B110114A15638AA3009ED9CC /* VOR.m */,
+				B110110315635580009ED9CC /* Supporting Files */,
+				B110116C1564A3BF009ED9CC /* README.markdown */,
+			);
+			path = SectorDataProvider;
+			sourceTree = "<group>";
+		};
+		B110110315635580009ED9CC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B110110415635580009ED9CC /* SectorDataProvider-Info.plist */,
+				B110110515635580009ED9CC /* InfoPlist.strings */,
+				B110110815635580009ED9CC /* SectorDataProvider-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B110111815635580009ED9CC /* SectorDataProviderTests */ = {
+			isa = PBXGroup;
+			children = (
+				B110111F15635580009ED9CC /* SectorDataProviderTests.m */,
+				B110114D15638B5F009ED9CC /* NavAidTests.m */,
+				B110114F15639713009ED9CC /* VORTests.m */,
+				B110111915635580009ED9CC /* Supporting Files */,
+			);
+			path = SectorDataProviderTests;
+			sourceTree = "<group>";
+		};
+		B110111915635580009ED9CC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B110111A15635580009ED9CC /* SectorDataProviderTests-Info.plist */,
+				B110111B15635580009ED9CC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B110112A15635923009ED9CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B110113315635924009ED9CC /* libKiwi.a */,
+				B110113515635924009ED9CC /* KiwiTests.octest */,
+				B110113715635924009ED9CC /* KiwiExamples.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B11010F615635580009ED9CC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B110114715638A65009ED9CC /* NavAid.h in Headers */,
+				B110114B15638AA3009ED9CC /* VOR.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B11010F815635580009ED9CC /* SectorDataProvider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B110112315635580009ED9CC /* Build configuration list for PBXNativeTarget "SectorDataProvider" */;
+			buildPhases = (
+				B11010F415635580009ED9CC /* Sources */,
+				B11010F515635580009ED9CC /* Frameworks */,
+				B11010F615635580009ED9CC /* Headers */,
+				B11010F715635580009ED9CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SectorDataProvider;
+			productName = SectorDataProvider;
+			productReference = B11010F915635580009ED9CC /* SectorDataProvider.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B110111015635580009ED9CC /* SectorDataProviderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B110112615635580009ED9CC /* Build configuration list for PBXNativeTarget "SectorDataProviderTests" */;
+			buildPhases = (
+				B110110C15635580009ED9CC /* Sources */,
+				B110110D15635580009ED9CC /* Frameworks */,
+				B110110E15635580009ED9CC /* Resources */,
+				B110110F15635580009ED9CC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B110111615635580009ED9CC /* PBXTargetDependency */,
+			);
+			name = SectorDataProviderTests;
+			productName = SectorDataProviderTests;
+			productReference = B110111115635580009ED9CC /* SectorDataProviderTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B11010EF1563557F009ED9CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Cisco Systems";
+			};
+			buildConfigurationList = B11010F21563557F009ED9CC /* Build configuration list for PBXProject "SectorDataProvider" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B11010ED1563557F009ED9CC;
+			productRefGroup = B11010FA15635580009ED9CC /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B110112A15635923009ED9CC /* Products */;
+					ProjectRef = B110112915635923009ED9CC /* Kiwi.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				B11010F815635580009ED9CC /* SectorDataProvider */,
+				B110111015635580009ED9CC /* SectorDataProviderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B110113315635924009ED9CC /* libKiwi.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKiwi.a;
+			remoteRef = B110113215635924009ED9CC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B110113515635924009ED9CC /* KiwiTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KiwiTests.octest;
+			remoteRef = B110113415635924009ED9CC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B110113715635924009ED9CC /* KiwiExamples.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KiwiExamples.octest;
+			remoteRef = B110113615635924009ED9CC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B11010F715635580009ED9CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B110110715635580009ED9CC /* InfoPlist.strings in Resources */,
+				B110116D1564A3BF009ED9CC /* README.markdown in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B110110E15635580009ED9CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B110111D15635580009ED9CC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B110110F15635580009ED9CC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B11010F415635580009ED9CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B110110B15635580009ED9CC /* SectorDataProvider.m in Sources */,
+				B110114815638A65009ED9CC /* NavAid.m in Sources */,
+				B110114C15638AA3009ED9CC /* VOR.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B110110C15635580009ED9CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B110112015635580009ED9CC /* SectorDataProviderTests.m in Sources */,
+				B110114E15638B5F009ED9CC /* NavAidTests.m in Sources */,
+				B110115015639713009ED9CC /* VORTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B110111615635580009ED9CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B11010F815635580009ED9CC /* SectorDataProvider */;
+			targetProxy = B110111515635580009ED9CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B110110515635580009ED9CC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B110110615635580009ED9CC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B110111B15635580009ED9CC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B110111C15635580009ED9CC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B110112115635580009ED9CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.7;
+			};
+			name = Debug;
+		};
+		B110112215635580009ED9CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx10.7;
+			};
+			name = Release;
+		};
+		B110112415635580009ED9CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SectorDataProvider/SectorDataProvider-Prefix.pch";
+				INFOPLIST_FILE = "SectorDataProvider/SectorDataProvider-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		B110112515635580009ED9CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SectorDataProvider/SectorDataProvider-Prefix.pch";
+				INFOPLIST_FILE = "SectorDataProvider/SectorDataProvider-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		B110112715635580009ED9CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SectorDataProvider/SectorDataProvider-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/KiwiPublicHeaders";
+				INFOPLIST_FILE = "SectorDataProviderTests/SectorDataProviderTests-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B110112815635580009ED9CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SectorDataProvider/SectorDataProvider-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/KiwiPublicHeaders";
+				INFOPLIST_FILE = "SectorDataProviderTests/SectorDataProviderTests-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.7;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B11010F21563557F009ED9CC /* Build configuration list for PBXProject "SectorDataProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B110112115635580009ED9CC /* Debug */,
+				B110112215635580009ED9CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B110112315635580009ED9CC /* Build configuration list for PBXNativeTarget "SectorDataProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B110112415635580009ED9CC /* Debug */,
+				B110112515635580009ED9CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B110112615635580009ED9CC /* Build configuration list for PBXNativeTarget "SectorDataProviderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B110112715635580009ED9CC /* Debug */,
+				B110112815635580009ED9CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B11010EF1563557F009ED9CC /* Project object */;
+}
