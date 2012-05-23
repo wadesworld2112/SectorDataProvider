@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NavPoint.h"
 
 @interface NavAid : NSObject
 @property (nonatomic, retain) NSString *identifier;
-
--(double) dmsStringToDecimal:(NSString *)dmsString;
+@property (nonatomic, retain) NavPoint *location;
+-(id)init;
 @end

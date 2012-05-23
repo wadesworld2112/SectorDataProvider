@@ -10,8 +10,4 @@
 
 @interface VOR : NavAid
 @property (nonatomic, assign) double_t frequency;
-@property (nonatomic, assign) double_t lat;
-@property (nonatomic, assign) double_t lon;
-@property (nonatomic, retain) NSString *latString;
-@property (nonatomic, retain) NSString *lonString;
 @end

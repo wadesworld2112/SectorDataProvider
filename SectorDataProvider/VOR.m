@@ -10,9 +10,4 @@
 
 @implementation VOR
 @synthesize frequency;
-@synthesize lat;
-@synthesize lon;
-@synthesize latString;
-@synthesize lonString;
-
 @end

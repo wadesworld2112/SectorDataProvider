@@ -1,5 +1,5 @@
 //
-//  VORdTests.m
+//  VORTests.m
 //  VORTests
 //
 //  Created by Wade Williams on 5/15/12.
@@ -34,23 +34,23 @@ describe(@"VOR", ^{
     });
 
     it(@"should return an identical lat when lat is set", ^{
-        [vor setLat:-90.0];
-        [[theValue([vor lat]) should] equal:theValue(-90.0)];
+        [[vor location]setLat:-90.0];
+        [[theValue([[vor location ]lat]) should] equal:theValue(-90.0)];
     });
     
     it(@"should return an identical lon when lon is set", ^{
-        [vor setLon:45.0];
-        [[theValue([vor lon]) should] equal:theValue(45.0)];
+        [[vor location ]setLon:45.0];
+        [[theValue([[vor location] lon]) should] equal:theValue(45.0)];
     });
 
     it(@"should return an identical string when latString is set", ^{
-        [vor setLatString:@"N042.21.26.852"];
-        [[[vor latString] should] equal:@"N042.21.26.852"];
+        [[vor location ]setLatString:@"N042.21.26.852"];
+        [[[[vor location ]latString] should] equal:@"N042.21.26.852"];
     });
     
     it(@"should return an identical string when lonString is set", ^{
-        [vor setLonString:@"W070.59.22.377"];
-        [[[vor lonString] should] equal:@"W070.59.22.377"];
+        [[vor location] setLonString:@"W070.59.22.377"];
+        [[[[vor location] lonString] should] equal:@"W070.59.22.377"];
     });
     
 

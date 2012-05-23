@@ -23,6 +23,22 @@
 		B110114E15638B5F009ED9CC /* NavAidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B110114D15638B5F009ED9CC /* NavAidTests.m */; };
 		B110115015639713009ED9CC /* VORTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B110114F15639713009ED9CC /* VORTests.m */; };
 		B110116D1564A3BF009ED9CC /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = B110116C1564A3BF009ED9CC /* README.markdown */; };
+		B1101173156863BE009ED9CC /* NavPointTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1101172156863BE009ED9CC /* NavPointTests.m */; };
+		B1101176156864E3009ED9CC /* NavPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = B1101174156864E3009ED9CC /* NavPoint.h */; };
+		B1101177156864E3009ED9CC /* NavPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = B1101175156864E3009ED9CC /* NavPoint.m */; };
+		B110117A1568829A009ED9CC /* NDB.h in Headers */ = {isa = PBXBuildFile; fileRef = B11011781568829A009ED9CC /* NDB.h */; };
+		B110117B1568829A009ED9CC /* NDB.m in Sources */ = {isa = PBXBuildFile; fileRef = B11011791568829A009ED9CC /* NDB.m */; };
+		B110117D156882EC009ED9CC /* NDBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B110117C156882EC009ED9CC /* NDBTests.m */; };
+		B110117F156885E4009ED9CC /* AirportTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B110117E156885E4009ED9CC /* AirportTests.m */; };
+		B1101182156887F0009ED9CC /* SectorObject.h in Headers */ = {isa = PBXBuildFile; fileRef = B1101180156887F0009ED9CC /* SectorObject.h */; };
+		B1101183156887F0009ED9CC /* SectorObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B1101181156887F0009ED9CC /* SectorObject.m */; };
+		B110118515688828009ED9CC /* SectorObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B110118415688828009ED9CC /* SectorObjectTests.m */; };
+		B110118815688A56009ED9CC /* Airport.h in Headers */ = {isa = PBXBuildFile; fileRef = B110118615688A56009ED9CC /* Airport.h */; };
+		B110118915688A56009ED9CC /* Airport.m in Sources */ = {isa = PBXBuildFile; fileRef = B110118715688A56009ED9CC /* Airport.m */; };
+		B110118B15688BE3009ED9CC /* SCT2ParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B110118A15688BE3009ED9CC /* SCT2ParserTests.m */; };
+		B110118E15688CA8009ED9CC /* SCT2Parser.h in Headers */ = {isa = PBXBuildFile; fileRef = B110118C15688CA7009ED9CC /* SCT2Parser.h */; };
+		B110118F15688CA8009ED9CC /* SCT2Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = B110118D15688CA8009ED9CC /* SCT2Parser.m */; };
+		B110119215698975009ED9CC /* TestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B110119115698975009ED9CC /* TestUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +96,23 @@
 		B110114D15638B5F009ED9CC /* NavAidTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavAidTests.m; sourceTree = "<group>"; };
 		B110114F15639713009ED9CC /* VORTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VORTests.m; sourceTree = "<group>"; };
 		B110116C1564A3BF009ED9CC /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		B1101172156863BE009ED9CC /* NavPointTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavPointTests.m; sourceTree = "<group>"; };
+		B1101174156864E3009ED9CC /* NavPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavPoint.h; sourceTree = "<group>"; };
+		B1101175156864E3009ED9CC /* NavPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavPoint.m; sourceTree = "<group>"; };
+		B11011781568829A009ED9CC /* NDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDB.h; sourceTree = "<group>"; };
+		B11011791568829A009ED9CC /* NDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDB.m; sourceTree = "<group>"; };
+		B110117C156882EC009ED9CC /* NDBTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDBTests.m; sourceTree = "<group>"; };
+		B110117E156885E4009ED9CC /* AirportTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirportTests.m; sourceTree = "<group>"; };
+		B1101180156887F0009ED9CC /* SectorObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectorObject.h; sourceTree = "<group>"; };
+		B1101181156887F0009ED9CC /* SectorObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectorObject.m; sourceTree = "<group>"; };
+		B110118415688828009ED9CC /* SectorObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectorObjectTests.m; sourceTree = "<group>"; };
+		B110118615688A56009ED9CC /* Airport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Airport.h; sourceTree = "<group>"; };
+		B110118715688A56009ED9CC /* Airport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Airport.m; sourceTree = "<group>"; };
+		B110118A15688BE3009ED9CC /* SCT2ParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCT2ParserTests.m; sourceTree = "<group>"; };
+		B110118C15688CA7009ED9CC /* SCT2Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCT2Parser.h; sourceTree = "<group>"; };
+		B110118D15688CA8009ED9CC /* SCT2Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCT2Parser.m; sourceTree = "<group>"; };
+		B110119015698975009ED9CC /* TestUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUtils.h; sourceTree = "<group>"; };
+		B110119115698975009ED9CC /* TestUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +188,16 @@
 				B110114615638A65009ED9CC /* NavAid.m */,
 				B110114915638AA3009ED9CC /* VOR.h */,
 				B110114A15638AA3009ED9CC /* VOR.m */,
+				B11011781568829A009ED9CC /* NDB.h */,
+				B11011791568829A009ED9CC /* NDB.m */,
+				B1101174156864E3009ED9CC /* NavPoint.h */,
+				B1101175156864E3009ED9CC /* NavPoint.m */,
+				B1101180156887F0009ED9CC /* SectorObject.h */,
+				B1101181156887F0009ED9CC /* SectorObject.m */,
+				B110118615688A56009ED9CC /* Airport.h */,
+				B110118715688A56009ED9CC /* Airport.m */,
+				B110118C15688CA7009ED9CC /* SCT2Parser.h */,
+				B110118D15688CA8009ED9CC /* SCT2Parser.m */,
 				B110110315635580009ED9CC /* Supporting Files */,
 			);
 			path = SectorDataProvider;
@@ -176,6 +219,13 @@
 				B110111F15635580009ED9CC /* SectorDataProviderTests.m */,
 				B110114D15638B5F009ED9CC /* NavAidTests.m */,
 				B110114F15639713009ED9CC /* VORTests.m */,
+				B1101172156863BE009ED9CC /* NavPointTests.m */,
+				B110117C156882EC009ED9CC /* NDBTests.m */,
+				B110117E156885E4009ED9CC /* AirportTests.m */,
+				B110118415688828009ED9CC /* SectorObjectTests.m */,
+				B110118A15688BE3009ED9CC /* SCT2ParserTests.m */,
+				B110119015698975009ED9CC /* TestUtils.h */,
+				B110119115698975009ED9CC /* TestUtils.m */,
 				B110111915635580009ED9CC /* Supporting Files */,
 			);
 			path = SectorDataProviderTests;
@@ -209,6 +259,11 @@
 			files = (
 				B110114715638A65009ED9CC /* NavAid.h in Headers */,
 				B110114B15638AA3009ED9CC /* VOR.h in Headers */,
+				B1101176156864E3009ED9CC /* NavPoint.h in Headers */,
+				B110117A1568829A009ED9CC /* NDB.h in Headers */,
+				B1101182156887F0009ED9CC /* SectorObject.h in Headers */,
+				B110118815688A56009ED9CC /* Airport.h in Headers */,
+				B110118E15688CA8009ED9CC /* SCT2Parser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +408,11 @@
 				B110110B15635580009ED9CC /* SectorDataProvider.m in Sources */,
 				B110114815638A65009ED9CC /* NavAid.m in Sources */,
 				B110114C15638AA3009ED9CC /* VOR.m in Sources */,
+				B1101177156864E3009ED9CC /* NavPoint.m in Sources */,
+				B110117B1568829A009ED9CC /* NDB.m in Sources */,
+				B1101183156887F0009ED9CC /* SectorObject.m in Sources */,
+				B110118915688A56009ED9CC /* Airport.m in Sources */,
+				B110118F15688CA8009ED9CC /* SCT2Parser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +423,12 @@
 				B110112015635580009ED9CC /* SectorDataProviderTests.m in Sources */,
 				B110114E15638B5F009ED9CC /* NavAidTests.m in Sources */,
 				B110115015639713009ED9CC /* VORTests.m in Sources */,
+				B1101173156863BE009ED9CC /* NavPointTests.m in Sources */,
+				B110117D156882EC009ED9CC /* NDBTests.m in Sources */,
+				B110117F156885E4009ED9CC /* AirportTests.m in Sources */,
+				B110118515688828009ED9CC /* SectorObjectTests.m in Sources */,
+				B110118B15688BE3009ED9CC /* SCT2ParserTests.m in Sources */,
+				B110119215698975009ED9CC /* TestUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +547,10 @@
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SectorDataProvider/SectorDataProvider-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/KiwiPublicHeaders";
 				INFOPLIST_FILE = "SectorDataProviderTests/SectorDataProviderTests-Info.plist";
 				OTHER_LDFLAGS = "-all_load";

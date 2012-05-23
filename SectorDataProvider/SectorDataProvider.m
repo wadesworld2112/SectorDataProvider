@@ -23,7 +23,6 @@
 
 - (NSArray *)vors
 {
-    //return [VOR vorFromString];
     return nil;
 }
 

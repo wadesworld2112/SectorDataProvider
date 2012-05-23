@@ -23,21 +23,17 @@ describe(@"NavAid", ^{
         [aid shouldNotBeNil];
     });
     
-    it(@"should return an identical string when identifier is set", ^{
-        [aid setIdentifier:@"test"];
-        [[[aid identifier] should] equal:@"test"];
-    });
-
-    it(@"should return an identical string when identifier is set", ^{
-        [aid setIdentifier:@"test"];
-        [[[aid identifier] should] equal:@"test"];
+    it(@"should have a valid location", ^{
+        [[aid location] shouldNotBeNil];
     });
     
-    it(@"should convert a degrees-minutes-seconds string to a decimal value", ^{
-       double_t decimalValue = [aid dmsStringToDecimal:@"W087.43.41"];
-       [[theValue(decimalValue) should] equal:theValue(-87.728056)];
-       });
+    
+    it(@"should return an identical string when identifier is set", ^{
+        [aid setIdentifier:@"test"];
+        [[[aid identifier] should] equal:@"test"];
+    });
 
+ 
 });
 
 SPEC_END
