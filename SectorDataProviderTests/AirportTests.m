@@ -16,7 +16,7 @@ describe(@"Airport", ^{
     __block Airport *airport = nil;
     
     beforeEach(^{ 
-        airport = [[Airport alloc] init];
+        airport = [[Airport alloc] initWithIdentifier:@"Test" frequency:125.0 latString:@"N042.21.26.852" lonString:@"W070.59.22.377" airspace:@"E"];
     });
     
     it(@"should be valid", ^{

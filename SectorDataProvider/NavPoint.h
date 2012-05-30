@@ -15,6 +15,9 @@
 @property (nonatomic, retain) NSString *lonString;
 
 -(double) dmsStringToDecimal:(NSString *)dmsString;
+-(id)init;
+-(id)initWithLatString:(NSString *)lat lonString:(NSString *)lon;
+
 
 
 @end

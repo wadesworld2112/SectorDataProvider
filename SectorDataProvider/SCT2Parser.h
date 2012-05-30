@@ -3,7 +3,7 @@
 //  SectorDataProvider
 //
 //  Created by Wade Williams on 5/19/12.
-//  Copyright (c) 2012 Cisco Systems. All rights reserved.
+//  Copyright (c) 2012 Wade Williams. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -12,6 +12,7 @@
     
     @private
         NSString *filePath;
+        NSDictionary *regexStrings;
 
 }
 @property (nonatomic, retain) NSArray *lines;
@@ -22,26 +23,27 @@
 -(NSInteger) lineCount;
 -(NSError *)readFileIntoArray;
 -(NSInteger)convertSectionNameToEnum:(NSString *)sectionTitle;
+-(void)parseVORSectionLine:(NSString *) line intoObjects:(NSMutableArray **)sectionObjects;
+-(void)parseInfoSectionLine:(NSString *) line intoObjects:(NSMutableArray **)sectionObjects;
 -(NSString *)formatSectionTitle:(NSString *)sectionTitle;
 -(NSArray *) extractSectionData:(NSString *)sectionTitle;
 @end
 
 enum SECTIONS {
-    COLORS = 0,
-    INFO,
-    VOR,
-    NDB,
-    AIRPORT,
-    RUNWAY,
-    FIXES,
-    ARTCC,
-    ARTCC_HIGH,
-    ARTCC_LOW,
-    SID,
-    STAR,
-    LOW_AIRWAY,
-    HIGH_AIRWAY,
-    GEO,
-    REGIONS,
-    LABELS
+    INFO_ELEMENT = 0,
+    VOR_ELEMENT,
+    NDB_ELEMENT,
+    AIRPORT_ELEMENT,
+    RUNWAY_ELEMENT,
+    FIXES_ELEMENT,
+    ARTCC_ELEMENT,
+    ARTCC_HIGH_ELEMENT,
+    ARTCC_LOW_ELEMENT,
+    SID_ELEMENT,
+    STAR_ELEMENT,
+    LOW_AIRWAY_ELEMENT,
+    HIGH_AIRWAY_ELEMENT,
+    GEO_ELEMENT,
+    REGIONS_ELEMENT,
+    LABELS_ELEMENT
 };

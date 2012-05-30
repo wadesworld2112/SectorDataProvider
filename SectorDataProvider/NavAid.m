@@ -12,12 +12,28 @@
 @synthesize identifier;
 @synthesize location;
 
--(id)init
+
+-(id)initWithIdentifier:(NSString *)identifierName
+              latString:(NSString *)lat
+              lonString:(NSString *)lon
 {
     if (self = [super init])
     {
-        [self setLocation:[[NavPoint alloc] init]];
+        if (identifierName)
+        {
+            self.identifier = identifierName;
+            [self setLocation:[[NavPoint alloc] initWithLatString:lat lonString:lon]];
+        }
+        return self;
+        
     }
-    return self;
+    return nil;
 }
+
+-(id)init
+{
+    return [self initWithIdentifier:nil latString:nil lonString:nil];
+}
+
+
 @end

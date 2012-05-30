@@ -16,7 +16,7 @@ describe(@"NavAid", ^{
     __block NavAid *aid = nil;
     
     beforeEach(^{ 
-        aid = [[NavAid alloc] init];
+        aid = [[NavAid alloc] initWithIdentifier:@"Test" latString:@"N042.21.19.173" lonString:@"W071.00.35.002"];
     });
     
     it(@"should be valid", ^{

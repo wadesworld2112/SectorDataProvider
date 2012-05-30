@@ -15,6 +15,29 @@
 @synthesize lonString;
 
 
+-(id)initWithLatString:(NSString *)latValue lonString:(NSString *)lonValue
+{
+    if (self = [super init])
+    {
+        if ([latValue length] > 0)
+        {
+            self.latString = latValue;
+            self.lonString = lonValue;
+            lat = [self dmsStringToDecimal:self.latString];
+            lon = [self dmsStringToDecimal:self.lonString];
+        }
+        return self;
+             
+    }
+    return nil;
+}
+
+-(id)init
+{
+    return [self initWithLatString:nil lonString:nil];
+}
+
+
 /* Formula
  
  Given a DMS (Degrees, Minutes, Seconds) coordinate such as W87°43′41″, it's trivial to convert it to a number of decimal degrees using the following method:
@@ -55,7 +78,9 @@
     NSString *stringFinal = [NSString stringWithFormat:@"%.6f", decimalPart + degrees];
     double_t finalValue = [stringFinal doubleValue];
     
-	if ( [[degreesTempString substringWithRange:NSMakeRange(0, 1)] isEqual:@"N"] || [[degreesTempString substringWithRange:NSMakeRange(0, 1)] isEqual:@"E"] )
+    NSString *hemisphere = [dmsString substringWithRange:NSMakeRange(0, 1)];
+    
+	if ( [hemisphere isEqual:@"N"] || [hemisphere isEqual:@"E"] )
         //W087.43.41
         return (double_t)finalValue; 	
 	else

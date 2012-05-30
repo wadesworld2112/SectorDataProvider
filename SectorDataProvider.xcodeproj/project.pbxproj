@@ -70,6 +70,13 @@
 			remoteGlobalIDString = A3B16542139967B800E9CC6E;
 			remoteInfo = KiwiExamples;
 		};
+		B11013CC156D29B4009ED9CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B110112915635923009ED9CC /* Kiwi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B11013BF156BC69A009ED9CC;
+			remoteInfo = "Kiwi OS X";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -246,6 +253,7 @@
 				B110113315635924009ED9CC /* libKiwi.a */,
 				B110113515635924009ED9CC /* KiwiTests.octest */,
 				B110113715635924009ED9CC /* KiwiExamples.octest */,
+				B11013CD156D29B4009ED9CC /* libKiwi copy.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -360,6 +368,13 @@
 			fileType = wrapper.cfbundle;
 			path = KiwiExamples.octest;
 			remoteRef = B110113615635924009ED9CC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B11013CD156D29B4009ED9CC /* libKiwi copy.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libKiwi copy.a";
+			remoteRef = B11013CC156D29B4009ED9CC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

@@ -12,5 +12,8 @@
 @interface NavAid : NSObject
 @property (nonatomic, retain) NSString *identifier;
 @property (nonatomic, retain) NavPoint *location;
+-(id)initWithIdentifier:(NSString *)identifierName
+              latString:(NSString *)lat
+              lonString:(NSString *)lon;
 -(id)init;
 @end

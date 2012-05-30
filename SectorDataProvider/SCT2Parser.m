@@ -7,17 +7,25 @@
 //
 
 #import "SCT2Parser.h"
+#import "VOR.h"
 
 
 //class extension to keep file path private
 @interface SCT2Parser () {
 }
     @property (nonatomic, retain) NSString *filePath;
+    @property (nonatomic, retain) NSDictionary *regexStrings;
 @end
 
 @implementation SCT2Parser
 @synthesize lines;
 @synthesize filePath;
+@synthesize regexStrings;
+
+                              
+                              
+                              
+                              
 
 -(id)init
 {
@@ -33,6 +41,26 @@
     
     if (self = [super init])
     {
+        
+         regexStrings = [NSDictionary  dictionaryWithObjectsAndKeys:
+                         @".*", [NSNumber numberWithInt:INFO_ELEMENT],
+                                      @"(\\w+)\\s+(\\d{3}\\.\\d+)\\s+([NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+([WwEe]\\d{1,}\\.\\d{1,}\\.\\d{1,}\\.\\d{1,})", [NSNumber numberWithInt:VOR_ELEMENT],
+                                      @"(\\w+)\\s+(\\d{3}\\.\\d+)\\s+([NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+([WwEe]\\d{1,}\\.\\d{1,}\\.\\d{1,})", [NSNumber numberWithInt:NDB_ELEMENT],
+                                      @"(\\w+)\\s+(\\d{3}\\.\\d+)\\s+([NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+([WwEe]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+([A-Ea-e])", [NSNumber numberWithInt:AIRPORT_ELEMENT],
+                                      @"(\\d+{1,}[\\w])\\s+(\\d+{1,}[\\w])\\s+(\\d+{3})\\s+(\\d+{3})\\s+([NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+([WwEe]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+([NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+([WwEe]\\d{1,}\\.\\d{1,}\\.\\d{1,})", [NSNumber numberWithInt:RUNWAY_ELEMENT],
+                                      @"(\\w+)\\s+([NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+([WwEe]\\d{1,}\\.\\d{1,}\\.\\d{1,})", [NSNumber numberWithInt:FIXES_ELEMENT],
+                                      @"(\\w+)\\s+(\\d{3}\\.\\d+)\\s+([NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+([WwEe]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+(\\d{3}\\.\\d+)\\s+([NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+([WwEe]\\d{1,}\\.\\d{1,}\\.\\d{1,})", [NSNumber numberWithInt:ARTCC_ELEMENT],
+                                      @"(\\w+)\\s+(\\d{3}\\.\\d+)\\s+([NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+([WwEe]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+(\\d{3}\\.\\d+)\\s+([NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+([WwEe]\\d{1,}\\.\\d{1,}\\.\\d{1,})", [NSNumber numberWithInt:ARTCC_HIGH_ELEMENT],                              
+                                      @"(\\w+)\\s+(\\d{3}\\.\\d+)\\s+([NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+([WwEe]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+(\\d{3}\\.\\d+)\\s+([NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+([WwEe]\\d{1,}\\.\\d{1,}\\.\\d{1,})", [NSNumber numberWithInt:ARTCC_LOW_ELEMENT],
+                                      @"([\\w\\s]+)\\s*(\\w+|)\\s+(\\w+|[NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+(\\w+|[NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+(\\w+|[NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+(\\w+|[NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s*(\\w+|\\d+)*", [NSNumber numberWithInt:SID_ELEMENT],
+                                      @"([\\w\\s]+)\\s*(\\w+|)\\s+(\\w+|[NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+(\\w+|[NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+(\\w+|[NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+(\\w+|[NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s*(\\w+|\\d+)*", [NSNumber numberWithInt:STAR_ELEMENT],
+                                      @"([\\w\\d\\-]+)\\s*(\\w+|)\\s+(\\w+|[NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+(\\w+|[NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+(\\w+|[NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+(\\w+|[NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s*(\\w+|\\d+)*", [NSNumber numberWithInt:LOW_AIRWAY_ELEMENT],
+                                      @"([\\w\\d\\-]+)\\s*(\\w+|)\\s+(\\w+|[NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+(\\w+|[NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+(\\w+|[NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+(\\w+|[NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s*(\\w+|\\d+)*", [NSNumber numberWithInt:HIGH_AIRWAY_ELEMENT],
+                                      @"(\\d{3}\\.\\d+)\\s+([NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+([WwEe]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+(\\d{3}\\.\\d+)\\s+([NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+([WwEe]\\d{1,}\\.\\d{1,}\\.\\d{1,})", [NSNumber numberWithInt:GEO_ELEMENT],
+                                      @"(\\w+|\\s+)\\s*(\\d{3}\\.\\d+)\\s+([NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+([WwEe]\\d{1,}\\.\\d{1,}\\.\\d{1,})", [NSNumber numberWithInt:REGIONS_ELEMENT],
+                                      @"\\\".*\\\"(\\d{3}\\.\\d+)\\s+([NnSs]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+([WwEe]\\d{1,}\\.\\d{1,}\\.\\d{1,})\\s+([\\w\\d]+)", [NSNumber numberWithInt:LABELS_ELEMENT], nil];
+        
+
         if ([path length] == 0) {
             return nil;
         }
@@ -92,50 +120,80 @@
 -(NSInteger)convertSectionNameToEnum:(NSString *)sectionTitle
 {
     if ( NSOrderedSame == [sectionTitle caseInsensitiveCompare:@"[INFO]"] )
-        return INFO;
+        return INFO_ELEMENT;
     if ( NSOrderedSame == [sectionTitle caseInsensitiveCompare:@"[VOR]"] )
-        return VOR;
+        return VOR_ELEMENT;
     if ( NSOrderedSame == [sectionTitle caseInsensitiveCompare:@"[NDB]"] )
-        return NDB;
+        return NDB_ELEMENT;
     if ( NSOrderedSame == [sectionTitle caseInsensitiveCompare:@"[AIRPORT]"] )
-        return AIRPORT;
+        return AIRPORT_ELEMENT;
     if ( NSOrderedSame == [sectionTitle caseInsensitiveCompare:@"[RUNWAY]"] )
-        return RUNWAY;
+        return RUNWAY_ELEMENT;
     if ( NSOrderedSame == [sectionTitle caseInsensitiveCompare:@"[FIXES]"] )
-        return FIXES;
+        return FIXES_ELEMENT;
     if ( NSOrderedSame == [sectionTitle caseInsensitiveCompare:@"[ARTCC]"] )
-        return ARTCC;
+        return ARTCC_ELEMENT;
     if ( NSOrderedSame == [sectionTitle caseInsensitiveCompare:@"[ARTCC HIGH]"] )
-        return ARTCC_HIGH;
+        return ARTCC_HIGH_ELEMENT;
     if ( NSOrderedSame == [sectionTitle caseInsensitiveCompare:@"[ARTCC LOW]"] )
-        return ARTCC_LOW;
+        return ARTCC_LOW_ELEMENT;
     if ( NSOrderedSame == [sectionTitle caseInsensitiveCompare:@"[SID]"] )
-        return SID;
+        return SID_ELEMENT;
     if ( NSOrderedSame == [sectionTitle caseInsensitiveCompare:@"[STAR]"] )
-        return STAR;
+        return STAR_ELEMENT;
     if ( NSOrderedSame == [sectionTitle caseInsensitiveCompare:@"[LOW AIRWAY]"] )
-        return LOW_AIRWAY;
+        return LOW_AIRWAY_ELEMENT;
     if ( NSOrderedSame == [sectionTitle caseInsensitiveCompare:@"[HIGH AIRWAY]"] )
-        return HIGH_AIRWAY;
+        return HIGH_AIRWAY_ELEMENT;
     if ( NSOrderedSame == [sectionTitle caseInsensitiveCompare:@"[GEO]"] )
-        return GEO;
+        return GEO_ELEMENT;
     if ( NSOrderedSame == [sectionTitle caseInsensitiveCompare:@"[REGIONS]"] )
-        return REGIONS;
+        return REGIONS_ELEMENT;
     if ( NSOrderedSame == [sectionTitle caseInsensitiveCompare:@"[LABELS]"] )
-        return LABELS;
+        return LABELS_ELEMENT;
     
     return -1;
 }
 
--(NSArray *) extractSectionData:(NSString *)sectionTitle
+-(void)parseInfoSectionLine:(NSString *) line intoObjects:(NSMutableArray **)sectionObjects
+{
+    
+}
+
+
+-(void)parseVORSectionLine:(NSString *) line intoObjects:(NSMutableArray **)sectionObjects
 {
     NSError *error = nil;
-    NSMutableArray *sectionLines = [[NSMutableArray alloc] init ];
     
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\[\\w+\\]"
-                                                                           options:NSRegularExpressionCaseInsensitive
-                                                                             error:&error];
+    NSRegularExpression *regex = [NSRegularExpression 
+                                  regularExpressionWithPattern:[regexStrings objectForKey:[NSNumber numberWithInt:VOR_ELEMENT]]
+                                  options:NSRegularExpressionCaseInsensitive
+                                  error:&error];
+
+ 
+    NSArray *matches = [regex matchesInString:line options:0 range:NSMakeRange(0, [line length])];
+    if ( [matches count] > 0 )
+    {
+        NSTextCheckingResult *r = [matches objectAtIndex:0];
         
+        if ( [r numberOfRanges] == 5 )
+        {
+            VOR *v = [[VOR alloc] initWithIdentifier:
+                      [line substringWithRange:[r rangeAtIndex:1]] 
+                    frequency:[[line substringWithRange:[r rangeAtIndex:2]] doubleValue]
+                    latString:[line substringWithRange:[r rangeAtIndex:3]]
+                    lonString:[line substringWithRange:[r rangeAtIndex:4]]];
+            [*sectionObjects addObject:v];
+        }
+    }
+
+}
+                                  
+-(NSArray *) extractSectionData:(NSString *)sectionTitle
+{
+    NSMutableArray *sectionObjects = [[NSMutableArray alloc] init ];
+    
+          
     BOOL inSection = NO;
     
         for (NSString *line in lines)
@@ -145,17 +203,20 @@
                inSection = YES;
            }
            
-        [regex enumerateMatchesInString:line options:0 range:NSMakeRange(0, [line length]) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
-            //call appropriate matcher for section type and add line to array
+             //call appropriate parser for each section type.  The parser
+             //will parse the line into the appropriate object type
+             //and add it to the array
             switch ([self convertSectionNameToEnum:sectionTitle]) {
-                case <#constant#>:
-                    <#statements#>
+                case INFO_ELEMENT:
+                    [self parseInfoSectionLine:line intoObjects:&sectionObjects];
+                    break;                    
+                case VOR_ELEMENT:
+                    [self parseVORSectionLine:line intoObjects:&sectionObjects];
                     break;
-                    
                 default:
                     break;
             };
-                                              }
+                                    
        }
     return nil;
 }

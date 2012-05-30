@@ -16,7 +16,7 @@ describe(@"NDB", ^{
     __block NDB *ndb = nil;
     
     beforeEach(^{ 
-        ndb = [[NDB alloc] init];
+        ndb = [[NDB alloc] initWithIdentifier:@"Test" latString:@"N042.21.19.173" lonString:@"W071.00.35.002"];
     });
     
     it(@"should be valid", ^{

@@ -1,4 +1,4 @@
-//
+    //
 //  SCTrTests.m
 //  SectorDataProviderTests
 //
@@ -21,9 +21,6 @@ describe(@"SCT2Parser", ^{
     __block SCT2Parser *parser = nil;
     __block NSError *error = nil;
     __block NSString *testResourcePath = nil;
-    __block NSArray *sectionTitles = [NSArray arrayWithObjects:@"[INFO]", @"[AIRPORT]", @"[RUNWAY]", @"[FIXES]",
-                               @"[ARTCC]", @"[ARTCC HIGH]", @"[ARTCC LOW]", @"[SID]", @"[STAR]",
-                               @"[LOW AIRWAY]", @"[HIGH AIRWAY]", @"[GEO]", @"[REGIONS]", @"[LABELS]", nil];
     
     beforeEach(^{ 
         
@@ -63,12 +60,31 @@ describe(@"SCT2Parser", ^{
     
     it(@"should return the correct enum for a section title", ^{
         
+        NSArray *sectionTitles = [NSArray arrayWithObjects:@"[INFO]",@"[VOR]", @"[NDB]", @"[AIRPORT]", @"[RUNWAY]", @"[FIXES]",
+                                  @"[ARTCC]", @"[ARTCC HIGH]", @"[ARTCC LOW]", @"[SID]", @"[STAR]",
+                                  @"[LOW AIRWAY]", @"[HIGH AIRWAY]", @"[GEO]", @"[REGIONS]", @"[LABELS]", nil];
+
         //TODO: generate a random number
         NSInteger whichTitle = 4;
-        
         NSString *title = [sectionTitles objectAtIndex:whichTitle];
         [[theValue([parser convertSectionNameToEnum:title]) should] equal:theValue(whichTitle)];
     });
+    
+    it(@"should correctly parse a valid VOR section", ^{
+        NSArray *vorLines = [NSArray arrayWithObjects:@"BOS 112.700 N042.21.26.852 W070.59.22.377",
+                             @"LWM 112.500 N042.44.25.512 W071.05.41.435",
+                             @"PUT 117.400 N041.57.19.652 W071.50.38.755", nil];
+        
+        NSMutableArray *resultLines = [[NSMutableArray alloc] init];
+        
+        for (NSString *line in vorLines)
+        {
+        
+            [parser parseVORSectionLine:line intoObjects:&resultLines];
+        }
+        
+       [[theValue([resultLines count]) should] equal:theValue([vorLines count])];
+       });
 
 
     
